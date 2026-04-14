@@ -84,12 +84,14 @@ if (!$exec) {
             echo '<tr>';
             echo '<th>ID</th>';
             echo '<th>Nome</th>';
+            echo '<th>Ações</th>';
             echo '</tr>';
         }
 
         echo '<tr>';
         echo '<td>' . htmlspecialchars($row['ID']) . '</td>';
         echo '<td>' . htmlspecialchars($row['NOME']) . '</td>';
+        echo '<td class="acoes-tabela"><a href="edita-clientes.php?id=' . urlencode($row['ID']) . '">Editar</a> <a href="exclui-clientes.php?id=' . urlencode($row['ID']) . '">Excluir</a></td>';
         echo '</tr>';
     }
 
